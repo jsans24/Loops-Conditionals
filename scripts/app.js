@@ -128,3 +128,18 @@ console.log('Thom is wearing a ' + thomsCloset[0][getRandomInt(4)] + ' and ' + t
 //     1. Thom wants to do inventory on his closet. Using bracket notation, log the arrays (not the elements in the arrays) containing all of Thom's shirts, pants, and accessories.
 for (i = 0; i < kristynsCloset.length - 1; i++) console.log("WHIRR: Now washing " + kristynsCloset[i]) // You should not put marshmallow peeps in the wash.
 console.log('Thoms closet contains ' + thomsCloset[0] + ', ' + thomsCloset[1] + ', and ' + thomsCloset[2])
+
+// Multiples of 3 and 5
+// Yes, you might have tackled this earlier, but try it again (don't look back at your other code 👀)
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+// Find the sum of all the multiples of 3 or 5 below 1000.
+// 👏 You just solved Project Euler problem 1! 👏
+const sum = []
+for (i = 0; i < 1000; i++){
+    if (i % 3 === 0 || i % 5 === 0) sum.push(i)
+}
+total = sum.reduce((a, b) => {
+    return a + b;
+  });
+console.log(total)
+
