@@ -121,3 +121,10 @@ const kristynsAccessories = [kristynsCloset[0], kristynsCloset[1], kristynsClose
 console.log("Kristyn is wearing a " + kristynsCloset[2] + ' and ' + kristynsCloset[3] + ' and a ' + kristynsAccessories[getRandomInt(3)])
 console.log('Thom is wearing a ' + thomsCloset[0][getRandomInt(4)] + ' and ' + thomsCloset[1][getRandomInt(3)] + ' and a ' + thomsCloset[2][getRandomInt(4)])
 
+// Dirty Laundry
+// Continue looking at the closet arrays:
+//     1. Time to do laundry - loop through Kristyn's closet and log the sentence "WHIRR: Now washing (item)" for each item in the array.
+// Inventory
+//     1. Thom wants to do inventory on his closet. Using bracket notation, log the arrays (not the elements in the arrays) containing all of Thom's shirts, pants, and accessories.
+for (i = 0; i < kristynsCloset.length - 1; i++) console.log("WHIRR: Now washing " + kristynsCloset[i]) // You should not put marshmallow peeps in the wash.
+console.log('Thoms closet contains ' + thomsCloset[0] + ', ' + thomsCloset[1] + ', and ' + thomsCloset[2])
