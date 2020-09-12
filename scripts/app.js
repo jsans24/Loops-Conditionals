@@ -67,7 +67,6 @@ for (i = 0; i < ninjaTurtles.length; i++) {
     let splitName = name.split('')
     for (j = 0; j < splitName.length; j++) {
         let letter = splitName[j].toString();
-        console.log(letter)
         if (j % 2 === 0) {
             splitName.splice(j, 1, letter.toUpperCase());
         } else {
@@ -143,3 +142,27 @@ total = sum.reduce((a, b) => {
   });
 console.log(total)
 
+// Triangles
+// 0. declare a variable argument and set it equal to 7.
+// 1. Write a loop that console logs a "left isosceles" triangle (SEE BELOW) made of '#' that has the height and length of argument.
+// 2. Write a loop that console logs a "right isosceles" triangle (SEE BELOW) made of '#' that has the height and length of argument. This is deceptively tricky.
+// 3. Write a loop that console logs an "upside down left" isosceles triangle made of '#' that has the height and length of the argument.
+// 4. Write a loop that console logs an "upside down right" isosceles triangle made of '#' that has the height and length of the argument. This is also tricky.
+// 5. Change the value of argument and reload your code and marvel at how you just solved a challenging problem and feel proud of yourself.
+const argument = 10
+let triangle = ''
+let hash = '#'
+let blank = ' '
+for (i = 0; i <= argument; i++) {
+  triangle += hash.repeat(i) + '\n'
+}
+for (i = argument - 1; i > 0; i--) {
+  triangle += blank.repeat(i) + hash.repeat(argument - i) + '\n'
+}
+for (i = argument; i > 0; i--) {
+  triangle += hash.repeat(i) + blank.repeat(argument - i) + '\n'
+}
+for (i = argument; i > 0; i--) {
+  triangle += blank.repeat(argument - i) + hash.repeat(i) + '\n'
+}
+console.log(triangle)
