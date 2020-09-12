@@ -166,3 +166,20 @@ for (i = argument; i > 0; i--) {
   triangle += blank.repeat(argument - i) + hash.repeat(i) + '\n'
 }
 console.log(triangle)
+
+// Find the Median
+//   Find the median number in the following nums array, then console.log that number.
+//   hint this will likely involve breaking down the problem into a few steps
+const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12, 17, 12, 71, 18, 15, 12];
+// Expected output:
+// => 15
+nums.sort(function(a, b){return a-b})
+let median = 0
+for (i = 1; i <= Math.floor(nums.length/2); i++) {
+  nums.splice(i - 1, 1, ' ')
+  nums.splice(nums.length - i, 1, ' ')
+  if (nums[i] !== isNaN) {
+    median = nums[i]
+  }
+}
+console.log(median)
